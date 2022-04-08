@@ -10,6 +10,11 @@ import UIKit
 class ExploreViewController: UIViewController,
                              UICollectionViewDataSource, UICollectionViewDelegate {
    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        return headerView
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         20
     }
@@ -19,7 +24,8 @@ class ExploreViewController: UIViewController,
         
         return cell
     }
-
+    
+   
     
 
     @IBOutlet var collectionView: UICollectionView!
