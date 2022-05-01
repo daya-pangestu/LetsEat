@@ -16,12 +16,14 @@ class ExploreViewController: UIViewController,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        manager.numberOfExploreItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exploreCell", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exploreCell", for: indexPath) as! ExploreCell
+        let exploreItem = manager.exploreItem(at: indexPath.row)
+        cell.ExploreNameLabel.text = exploreItem.name
+        cell.ExploreImageView.image = UIImage(named: exploreItem.image!)
         return cell
     }
     
@@ -29,10 +31,13 @@ class ExploreViewController: UIViewController,
     
 
     @IBOutlet var collectionView: UICollectionView!
+    
+    let manager = ExploreDataManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.fetch()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func unwindlocationCancel(segue:
