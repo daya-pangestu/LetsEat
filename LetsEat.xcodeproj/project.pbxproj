@@ -24,6 +24,8 @@
 		6FCBC439281EBE94007F87BA /* ExplorerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FCBC438281EBE94007F87BA /* ExplorerData.plist */; };
 		6FCBC43B281EC1AB007F87BA /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCBC43A281EC1AB007F87BA /* ExploreItem.swift */; };
 		6FE1BF49281EED940071893B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE1BF48281EED940071893B /* LocationViewController.swift */; };
+		6FE1BF4B281EF12C0071893B /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FE1BF4A281EF12C0071893B /* Locations.plist */; };
+		6FE1BF4D281EF2A40071893B /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE1BF4C281EF2A40071893B /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		6FCBC438281EBE94007F87BA /* ExplorerData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExplorerData.plist; sourceTree = "<group>"; };
 		6FCBC43A281EC1AB007F87BA /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		6FE1BF48281EED940071893B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		6FE1BF4A281EF12C0071893B /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		6FE1BF4C281EF2A40071893B /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 		6FE1BF47281EED740071893B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6FE1BF4A281EF12C0071893B /* Locations.plist */,
+				6FE1BF4C281EF2A40071893B /* LocationDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				6F1C017B27FF2FAF001ED721 /* LaunchScreen.storyboard in Resources */,
 				6F1C01A127FF36BD001ED721 /* Assets.xcassets in Resources */,
 				6F1C017627FF2FAE001ED721 /* Main.storyboard in Resources */,
+				6FE1BF4B281EF12C0071893B /* Locations.plist in Resources */,
 				6FCBC439281EBE94007F87BA /* ExplorerData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +352,7 @@
 				6F47F0FC281EC7BA00A4D86F /* ExploreDataManager.swift in Sources */,
 				6F47F101281ED0A900A4D86F /* ExploreCell.swift in Sources */,
 				6FE1BF49281EED940071893B /* LocationViewController.swift in Sources */,
+				6FE1BF4D281EF2A40071893B /* LocationDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
