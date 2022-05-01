@@ -27,7 +27,6 @@ class ExploreViewController: UIViewController,
         return cell
     }
     
-   
     
 
     @IBOutlet var collectionView: UICollectionView!

@@ -23,6 +23,7 @@
 		6FA0C5B22800765300421FB7 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0C5B12800765300421FB7 /* RestaurantListViewController.swift */; };
 		6FCBC439281EBE94007F87BA /* ExplorerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FCBC438281EBE94007F87BA /* ExplorerData.plist */; };
 		6FCBC43B281EC1AB007F87BA /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCBC43A281EC1AB007F87BA /* ExploreItem.swift */; };
+		6FE1BF49281EED940071893B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE1BF48281EED940071893B /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		6FA0C5B12800765300421FB7 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
 		6FCBC438281EBE94007F87BA /* ExplorerData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExplorerData.plist; sourceTree = "<group>"; };
 		6FCBC43A281EC1AB007F87BA /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
+		6FE1BF48281EED940071893B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		6F1C016D27FF2FAE001ED721 /* LetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				6FE1BF45281EED5D0071893B /* Location */,
 				6FA0C5B02800762000421FB7 /* Restaurants */,
 				6FA0C5AD2800630C00421FB7 /* Explore */,
 				6F1C016E27FF2FAE001ED721 /* AppDelegate.swift */,
@@ -172,6 +175,30 @@
 				6FCBC438281EBE94007F87BA /* ExplorerData.plist */,
 				6FCBC43A281EC1AB007F87BA /* ExploreItem.swift */,
 				6F47F0FB281EC7BA00A4D86F /* ExploreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6FE1BF45281EED5D0071893B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				6FE1BF47281EED740071893B /* Model */,
+				6FE1BF46281EED6F0071893B /* View */,
+				6FE1BF48281EED940071893B /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		6FE1BF46281EED6F0071893B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FE1BF47281EED740071893B /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +344,7 @@
 				6FA0C5AF2800634700421FB7 /* ExploreViewController.swift in Sources */,
 				6F47F0FC281EC7BA00A4D86F /* ExploreDataManager.swift in Sources */,
 				6F47F101281ED0A900A4D86F /* ExploreCell.swift in Sources */,
+				6FE1BF49281EED940071893B /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

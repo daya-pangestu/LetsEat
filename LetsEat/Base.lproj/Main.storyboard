@@ -440,10 +440,10 @@
             </objects>
             <point key="canvasLocation" x="4180" y="449"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="w8O-0P-xCQ">
             <objects>
-                <viewController id="mqy-jB-fMU" sceneMemberID="viewController">
+                <viewController id="mqy-jB-fMU" customClass="LocationViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNp-ZQ-t72">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,6 +470,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mqy-jB-fMU" id="aVg-3t-aFT"/>
+                                    <outlet property="delegate" destination="mqy-jB-fMU" id="cAn-TH-Ymw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KtP-VJ-1Dg"/>
@@ -489,6 +493,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="TN5-je-Ncz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="lHF-BM-QYf" id="kGi-pC-meT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nO7-tY-h4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gYC-SW-C9y" userLabel="Exit" sceneMemberID="exit"/>
