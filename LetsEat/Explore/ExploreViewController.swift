@@ -23,7 +23,7 @@ class ExploreViewController: UIViewController,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exploreCell", for: indexPath) as! ExploreCell
         let exploreItem = manager.exploreItem(at: indexPath.row)
         cell.ExploreNameLabel.text = exploreItem.name
-        cell.ExploreImageView.image = UIImage(named: exploreItem.image!)
+        cell.ExploreImageView.image = UIImage(named: exploreItem.image ?? "")
         return cell
     }
     

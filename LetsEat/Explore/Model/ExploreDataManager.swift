@@ -9,13 +9,13 @@ import Foundation
 
 class ExploreDataManager : DataManager {
     func fetch() -> [ExploreItem] {
-    return loadPlist(file: "ExploreData").map{ data in
+    return loadPlist(file: "ExplorerData").map{ data in
         LetsEat.ExploreItem(dict: data as! [String : String])
         }
     }
 
     func numberOfExploreItems() -> Int{
-        loadData().count
+        loadPlist(file: "ExplorerData").count
     }
     
     func exploreItem(at index : Int) -> ExploreItem{
