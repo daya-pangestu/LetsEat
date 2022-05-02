@@ -7,24 +7,13 @@
 
 import Foundation
 
-class ExploreDataManager{
+class ExploreDataManager : DataManager {
     func fetch() -> [ExploreItem] {
-    return loadData().map{ data in
-        LetsEat.ExploreItem(dict: data)
+    return loadPlist(file: "ExploreData").map{ data in
+        LetsEat.ExploreItem(dict: data as! [String : String])
         }
     }
-    
-    private func loadData() -> [[String :String]]{
-        let decoder = PropertyListDecoder()
-        if let path = Bundle.main.path(forResource:
-                                        "ExplorerData", ofType: "plist"),
-           let exploreData = FileManager.default.contents(atPath: path),
-           let exploreItems = try? decoder.decode([[String : String]].self, from: exploreData){
-            return exploreItems
-        }
-        return [[:]]
-    }
-    
+
     func numberOfExploreItems() -> Int{
         loadData().count
     }
