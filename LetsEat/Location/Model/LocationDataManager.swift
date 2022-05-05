@@ -8,7 +8,7 @@
 import Foundation
 
 class LocationDataManager{
-    private var locations : [String] = []
+    private var locations : [LocationItem] = []
     
     private func loadData() -> [[String : String]] {
         let decodder = PropertyListDecoder()
@@ -22,11 +22,7 @@ class LocationDataManager{
     
     func fetch(){
         locations.append(contentsOf: loadData().map{ data in
-            var result = ""
-            if let city = data["city"], let state = data["state"] {
-                result = "\(city), \(state)"
-            }
-            return result
+            return LocationItem(dict: data)
         })
     }
     
@@ -34,7 +30,7 @@ class LocationDataManager{
         locations.count
     }
     
-    func locationItem(at index :Int) ->String {
+    func locationItem(at index :Int) -> LocationItem {
         locations[index]
     }
 }

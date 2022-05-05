@@ -25,7 +25,7 @@ private extension MapViewController {
         manager.fetch{ annotations in setupMap(annotations) }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case Segue.showDetail.rawValue:
             showRestaurantDetail(segue)

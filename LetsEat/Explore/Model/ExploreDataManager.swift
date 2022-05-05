@@ -8,17 +8,21 @@
 import Foundation
 
 class ExploreDataManager : DataManager {
-    func fetch() -> [ExploreItem] {
-    return loadPlist(file: "ExplorerData").map{ data in
-        LetsEat.ExploreItem(dict: data as! [String : String])
+    private var exploreItems : [ExploreItem] = []
+    
+    
+    func fetch() {
+        loadPlist(file: "ExplorerData").forEach{ data in
+            let exploreItem = LetsEat.ExploreItem(dict: data as! [String : String])
+            exploreItems.append(exploreItem)
         }
     }
 
     func numberOfExploreItems() -> Int{
-        loadPlist(file: "ExplorerData").count
+        exploreItems.count
     }
     
     func exploreItem(at index : Int) -> ExploreItem{
-        fetch()[index]
+        exploreItems[index]
     }
 }
