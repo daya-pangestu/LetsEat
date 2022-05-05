@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationViewController: UIViewController, UITableViewDataSource {
+class LocationViewController: UIViewController {
    
     @IBOutlet var tableView: UITableView!
     
@@ -15,10 +15,20 @@ class LocationViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.fetch()
+        initialize()
     }
     
-    
+}
+
+// MARK: Private Extension
+private extension LocationViewController {
+    func initialize() {
+        manager.fetch()
+    }
+}
+// MARK: UITableViewDataSource
+extension LocationViewController:
+UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         manager.numberOfLocationItems()
     }
@@ -28,8 +38,4 @@ class LocationViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = manager.locationItem(at: indexPath.row)
         return cell
     }
-//
-
-  
-    
 }
