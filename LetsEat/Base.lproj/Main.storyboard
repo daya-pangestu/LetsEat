@@ -227,7 +227,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="tlU-Xd-xdf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="tlU-Xd-xdf" customClass="RestaurantCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="10" y="0.0" width="355" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UV6-Cz-J0l">
@@ -341,6 +341,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="cuisineLabel" destination="3SE-cS-evN" id="zH2-r7-ZWU"/>
+                                            <outlet property="restaurantImageView" destination="mug-W4-kG1" id="Uxy-HX-0b2"/>
+                                            <outlet property="titleLabel" destination="uze-5H-uaD" id="Uhn-46-gQb"/>
                                             <segue destination="AUk-8K-Hpb" kind="show" id="xTl-u8-bvE"/>
                                         </connections>
                                     </collectionViewCell>
