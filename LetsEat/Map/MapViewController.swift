@@ -35,7 +35,7 @@ private extension MapViewController {
     }
     
     func showRestaurantDetail(_ segue : UIStoryboardSegue){
-        if let viewController = segue.destination as? RestaurantDetailTableViewController, let restaurant =
+        if let viewController = segue.destination as? RestaurantDetailViewController, let restaurant =
             selectedRestaurant {
             viewController.selectedRestaurant = restaurant
         }

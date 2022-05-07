@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurant Detail Table View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="EVH-qe-Ai0">
             <objects>
-                <tableViewController id="gUI-DA-nYm" customClass="RestaurantDetailTableViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gUI-DA-nYm" customClass="RestaurantDetailViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ofj-pv-Ill">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,6 +456,16 @@
                     <navigationItem key="navigationItem" id="wWr-Xd-wpA">
                         <barButtonItem key="rightBarButtonItem" image="heart-unselected" id="soV-Zu-HEK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="syM-kD-sxl" id="sa4-os-QdC"/>
+                        <outlet property="cuisineLabel" destination="d71-Eq-mMn" id="pVl-hG-sJX"/>
+                        <outlet property="headerAddressLabel" destination="UYm-Ip-FZy" id="qmP-Y4-cBx"/>
+                        <outlet property="heartButton" destination="soV-Zu-HEK" id="HL7-Ep-CKe"/>
+                        <outlet property="locationMapImageView" destination="eZM-l0-bwa" id="x8T-SI-fDE"/>
+                        <outlet property="nameLabel" destination="6er-aK-n02" id="qlt-Z4-dIX"/>
+                        <outlet property="overallRatingLabel" destination="zON-CP-XRT" id="Odf-Mx-lQa"/>
+                        <outlet property="tableDetailLabel" destination="QHZ-op-gz0" id="NIL-23-AP4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbX-wO-Y8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
